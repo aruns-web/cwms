@@ -4,7 +4,7 @@ include('includes/config.php');
 if(isset($_POST['book']))
 {
 $ptype=$_POST['packagetype'];
-  
+$checkboxv=$_POST['service']; 
 $fname=$_POST['fname'];
 $mobile=$_POST['contactno'];
 $mail=$_POST['email'];
@@ -15,16 +15,11 @@ $time=$_POST['washtime'];
 $message=$_POST['message'];
 $status='New';
 $bno=mt_rand(100000000, 999999999);
-$sql="INSERT INTO tblcarwashbooking(bookingId,packageType,ServiceOpt1,ServiceOpt,ServiceOpt,ServiceOpt,ServiceOpt,ServiceOpt6,fullName,mobileNumber,email,vno,model,washDate,washTime,message,status) VALUES(:bno,:ptype,:service1,:service2,:service3,:service4,:service5,:service6,:fname,:mobile,:mail,:vehicleno,:vmodel,:date,:time,:message,:status)";
+$sql="INSERT INTO tblcarwashbooking(bookingId,packageType,:services,:fname,:mobile,:mail,:vehicleno,:vmodel,:date,:time,:message,:status) VALUES(:bno,:ptype,:checkboxv,:fname,:mobile,:mail,:vehicleno,:vmodel,:date,:time,:message,:status)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':bno',$bno,PDO::PARAM_STR);
 $query->bindParam(':ptype',$ptype,PDO::PARAM_STR);
-$query->bindParam(':service1',$service1,PDO::PARAM_STR);
-$query->bindParam(':service2',$service2,PDO::PARAM_STR);
-$query->bindParam(':service3',$service3,PDO::PARAM_STR);
-$query->bindParam(':service4',$service4,PDO::PARAM_STR);
-$query->bindParam(':service5',$service5,PDO::PARAM_STR);
-$query->bindParam(':service6',$service6,PDO::PARAM_STR);
+$query->bindParam(':checkboxv',$checkboxv,PDO::PARAM_STR);
 
 $query->bindParam(':fname',$fname,PDO::PARAM_STR);
 $query->bindParam(':mobile',$mobile,PDO::PARAM_STR);
@@ -103,7 +98,7 @@ else
  
  <!---->
         <div class="grid-form1">
-            <h3>Add Car Washing Booking</h3>
+            <h3 align:center>Add Car Washing Booking </h3>
  
                 <div class="tab-content">
                         <div class="tab-pane active" id="horizontal-form">
@@ -126,13 +121,14 @@ else
                         <div class="form-group">
                                 <label for="focusedinput" class="col-sm-3 control-label">Select Custom Services</label>
                                 <div class="col-sm-8">
-                                    <input type="checkbox" name="service1" value="a" > Seats Washing <br>
-                                    <input type="checkbox" name="service2" value="b" > Vacuum Cleaning<br>
-                                    <input type="checkbox" name="service3" value="c" > Exterior Cleaning<br>
-                                    <input type="checkbox" name="service4" value="d" > Interior Wet Cleaning<br>
-                                    <input type="checkbox" name="service5" value="e" > Window Wiping<br>
-                                    <input type="checkbox" name="service6" value="f" > NA
-                            
+                                    <input type="checkbox" name="service[]" value="a" > Seats Washing <br>
+                                    <input type="checkbox" name="service[]" value="b" > Vacuum Cleaning<br>
+                                    <input type="checkbox" name="service[]" value="c" > Exterior Cleaning<br>
+                                    <input type="checkbox" name="service[]" value="d" > Interior Wet Cleaning<br>
+                                    <input type="checkbox" name="service[]" value="e" > Window Wiping<br>
+                                    <input type="checkbox" name="service[]" value="f" > NA
+
+              
                                 </div>
                         
                         </div>
