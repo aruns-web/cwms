@@ -17,7 +17,7 @@ else{
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>CWMS | New Bookings</title>
+<title>CWMS | All Bookings</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -89,21 +89,21 @@ else{
 				</div>
 <!--heder end here-->
 <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Manage New Bookings</li>
+                <li class="breadcrumb-item"><a href="dashboard.php">Home</a><i class="fa fa-angle-right"></i>Manage All Bookings</li>
             </ol>
 <div class="agile-grids">	
 				<!-- tables -->
 
 				<div class="agile-tables">
 					<div class="w3l-table-info">
-					  <h2>New Bookings</h2>
+					  <h2>All Bookings</h2>
 					    <table id="table">
 						<thead>
 						  <tr>
 						  <th>Booking No.</th>
 							<th>Name</th>
 							<th width="200">Pacakge Type</th>
-							
+
 							<th>Mobile No.</th>
 							<th>Vehicle No.</th>
 							<th>Vehicle Model</th>
@@ -134,14 +134,17 @@ if($ptype==3): echo "COMPLEX CLEANING ";endif;
 
 
 							?></td>
+							
+						
+						<!--	<td><?php echo htmlentities($result->washingPointName	);?><br>
+								<?php echo htmlentities($result->washingPointAddress);?></td>  -->
 
-								 
 								<td><?php echo htmlentities($result->mobileNumber);?></td>
 								<td><?php echo htmlentities($result->vno);?></td>
 								<td><?php echo htmlentities($result->model);?></td>
 
-							<td><?php echo htmlentities($result->washDate."/".$result->washTime);?></td>
-							
+							<td><?php echo htmlentities($result->washDate." / ".$result->washTime);?></td>
+							<br>
 								<td><?php echo htmlentities($result->postingDate);?></td>
 				
 
