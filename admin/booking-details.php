@@ -150,7 +150,8 @@ foreach($results as $result)
                                 if($ptype==2): echo "PREMIUM CLEANING ";endif;
                                 if($ptype==3): echo "COMPLEX CLEANING ";endif;
                                 ?></td>	
-						    <th>Washing Point</th>
+						    <th>E Mail</th>
+                                <td colspan="3"><?php echo htmlentities($result->email);?></td>
 							
 					    </tr>
 						<tr>
@@ -174,10 +175,7 @@ foreach($results as $result)
 								<td><?php echo htmlentities($result->model);?></td>
 
 						</tr>
-						<tr>
-								<th>E Mail</th>
-                                <td colspan="3"><?php echo htmlentities($result->email);?></td>
-						</tr>
+						
 <?php if($result->adminRemark==''): ?>
 	<tr>
 		<td colspan="3">

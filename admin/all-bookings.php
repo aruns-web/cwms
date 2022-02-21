@@ -103,7 +103,7 @@ else{
 						  <th>Booking No.</th>
 							<th>Name</th>
 							<th width="200">Pacakge Type</th>
-
+							
 							<th>Mobile No.</th>
 							<th>Vehicle No.</th>
 							<th>Vehicle Model</th>
@@ -134,17 +134,14 @@ if($ptype==3): echo "COMPLEX CLEANING ";endif;
 
 
 							?></td>
-							
-						
-						<!--	<td><?php echo htmlentities($result->washingPointName	);?><br>
-								<?php echo htmlentities($result->washingPointAddress);?></td>  -->
 
+								 
 								<td><?php echo htmlentities($result->mobileNumber);?></td>
 								<td><?php echo htmlentities($result->vno);?></td>
 								<td><?php echo htmlentities($result->model);?></td>
 
-							<td><?php echo htmlentities($result->washDate." / ".$result->washTime);?></td>
-							<br>
+							<td><?php echo htmlentities($result->washDate."/".$result->washTime);?></td>
+							
 								<td><?php echo htmlentities($result->postingDate);?></td>
 				
 
