@@ -104,7 +104,7 @@ else
                         <div class="price-item">
                             <div class="price-header">
                                 <h3>Basic Cleaning</h3>
-                                <h2><span>$</span><strong>10</strong><span>.99</span></h2>
+                                <h2><span>₹</span><strong>750</strong><span></span></h2>
                             </div>
                             <div class="price-body">
                                 <ul>
@@ -124,7 +124,7 @@ else
                         <div class="price-item featured-item">
                             <div class="price-header">
                                 <h3>Premium Cleaning</h3>
-                                <h2><span>$</span><strong>20</strong><span>.99</span></h2>
+                                <h2><span>₹</span><strong>1500</strong><span></span></h2>
                             </div>
                             <div class="price-body">
                                 <ul>
@@ -144,7 +144,7 @@ else
                         <div class="price-item">
                             <div class="price-header">
                                 <h3>Complex Cleaning</h3>
-                                <h2><span>$</span><strong>30</strong><span>.99</span></h2>
+                                <h2><span>₹</span><strong>2000</strong><span></span></h2>
                             </div>
                             <div class="price-body">
                                 <ul>
